@@ -1,0 +1,29 @@
+                                                                                               
+                                                                                                                          Tree Traversal
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> Tree Traversal:
+    Visiting all the nodes in a tree.
+
+-> Visiting a node: Either we are processing data or printing the data.
+
+-> 2 types of tree traversal:
+-- Breadth first: 
+--------------------------------------------------------------------------------------------------------
+
+* All the nodes in same level are visited.
+* We go level by level(Level-Order)
+
+--Dept first: 3 strategies
+---------------------------------------------------------------------------------------------------------
+
+* root--leftsubtree--rightsubtree  // Pre-Order Traversal
+ First data of root will processed then the whole left subtree and then whole right subtree.
+
+* leftsubtree--root--rightsubtree // In-Order Traversal
+First the data of leftsubtree is processed then data of root and then data of whole rightsubtree is processed.
+
+NOTE: In-Order Traversal of BST is a sorted list.
+
+* leftsubtree--rightsubtree--root //Post-Order Traversal
+First the data of leftsubtree is processed then data of whole rightsubtree is processed then data of root is processed.

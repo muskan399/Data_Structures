@@ -3,7 +3,7 @@ using namespace std;
 /*
 Leftmost element is min
 Righmost element is max
-/*
+*/
 class BST_Node{
 	public:
 		int data;

@@ -1,0 +1,11 @@
+Whenever we run a program, memory is allocated to it
+
+1. Text: For storing instructions.
+2. Global: For storing global and static variables.
+3. Stack: For function calls and local variables.
+4. Heap: 
+    -> This is dynamic memory and its size can grow or shrink during runtime. 
+    -> Whenever we use new operator or malloc, calloc, it takes space from this area of memory.
+    -> We need to explicitly clear the space from here using delete, free keyword otherwise it takes space till the program execution          completes.
+
+Note: See video: 29 for visualizing recursion.

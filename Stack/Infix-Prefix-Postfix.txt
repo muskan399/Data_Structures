@@ -1,0 +1,41 @@
+Sr.No. 	Infix Notation 	Prefix Notation 	Postfix Notation
+1 	a + b 	                    + a b 	                 a b +
+2 	(a + b) ∗ c  	∗ + a b c 	                 a b + c ∗
+3 	a ∗ (b + c) 	                  ∗ a + b c 	                  a b c + ∗
+4 	a / b + c / d 	+ / a b / c d 	a b / c d / +
+5 	(a + b) ∗ (c + d) 	∗ + a b + c d 	a b + c d + ∗
+6 	((a + b) ∗ c) - d 	- ∗ + a b c d 	a b + c ∗ d -
+
+Infix:
+---------------------------------------------------- 
+Easily readable for humans
+
+Prefix and Postfix:
+----------------------------------------------------
+Better for machine. Since less space is used. No use of braces.
+
+Convert Infix to Prefix, Postfix
+----------------------------------------------------
+2 rules
+1. Order of precedence
+----------------------------
+{}
+exponential
+*/
++-
+
+2. Associativity
+----------------------------
+* and / 
++ and -
+Have same priority so we will see from left to right e.g. a*b/c ->  (a*b)/c 
+                                                                                      a/b*c->   (a/b)*c
+
+To convert 
+1. Apply brackets based on above rules.
+2. For Prefix: operator should be in starting.
+3. For Postfix: operator should be in ending.
+
+Implementation:
+----------------------------------------------------------------
+Use Stack

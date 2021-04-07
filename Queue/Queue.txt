@@ -1,0 +1,33 @@
+Queue: 
+---------------------------------------------------------------------------------------------------------------------
+
+-> Follows First In First Out(FIFO)
+-> Insertion can be performed at one end(rear or tail ) and deletion from other end(front)
+-> Operations:
+
+1. enqueue() or push(): Insert an element
+2. dequeue() or pop(): Pop the element and return it.
+3. front() or peek(): Return the element at front.
+4. IsEmpty(): Return boolean
+5. IsFull(): Return boolean
+
+All the operations take constant time: T.C -> O(1)
+
+E.g.
+enqueue(1)-> 1//  Front==rear
+enqueue(2)-> 2 1 //rear++
+enqueue(3)-> 3 2 1 //rear++
+dequeue()-> 3 2// front++
+front()-> return 2
+
+Application of Queue:
+1. Mostly used when we have shared resource but the resource can handle only 1request at a time. 
+    Request that come first are served first and queue up further requests.
+
+2. Ex. If we have a printer that can print 1 client data at a time then other request will queue up.
+
+3. Processor is also a shared resources. It can attend only 1 process at a time so it will serve first the processes that come up first and     queue up later on.
+
+4. Process Scheduling.
+
+5. Simulating wait.

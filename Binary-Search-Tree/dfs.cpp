@@ -28,22 +28,31 @@ BST_Node* insert(BST_Node* root,char ele)
 	return root;
 	
 }
-void level_traversal(BST_Node* root)
+void preorder_traversal(BST_Node* root)
 {
 	if(root==NULL)
 	return;
-	queue< BST_Node* > q;
-	q.push(root);
-	while(!q.empty())
-	{
-		BST_Node* current=q.front();
-		cout<<current->data<<" ";
-		if(current->left!=NULL)
-		q.push(current->left);
-		if(current->right!=NULL)
-		q.push(current->right);
-		q.pop();
-	}
+	cout<<root->data<<" ";
+	preorder_traversal(root->left);
+	preorder_traversal(root->right);
+}
+
+void in_traversal(BST_Node* root)
+{
+	if(root==NULL)
+	return;
+	in_traversal(root->left);
+	cout<<root->data<<" ";
+	in_traversal(root->right);
+}
+
+void post_traversal(BST_Node* root)
+{
+	if(root==NULL)
+	return;
+	post_traversal(root->left);
+	post_traversal(root->right);
+	cout<<root->data<<" ";
 }
 int main()
 {
@@ -58,5 +67,10 @@ int main()
 		cin>>ele;
 		root=insert(root,ele);
 	}
-	level_traversal(root);
+	cout<<"\nPRE-ORDER TRAVERSAL:    ";
+	preorder_traversal(root);
+	cout<<"\nIN-ORDER TRAVERSAL:    ";
+	in_traversal(root);
+	cout<<"\nPOST-ORDER TRAVERSAL:    ";
+	post_traversal(root);
 }
